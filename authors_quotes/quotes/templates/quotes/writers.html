@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% load static %}
+
+    {% block css_files %} 
+        <link rel='stylesheet', href="{% static "quotes/writers.css" %}">
+        <link rel='stylesheet', href="{% static "quotes/header.css" %}">
+    {% endblock  %}
+   
+
+
+{% block page_title  %}Welcome{% endblock  %}
+
+{% block content %}
+    {% include 'quotes/header.html' %}
+
+    <ul>
+        {% for name in author_names  %}
+            <li><a href="{% url "writer-quote" name %}">{{ name }}</a></li>
+        {% endfor %}
+    </ul>
+{% endblock  %}

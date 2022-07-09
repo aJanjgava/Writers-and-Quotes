@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block css_files %} 
+        <link rel='stylesheet', href="{% static "quotes/quotes.css" %}">
+        <link rel='stylesheet', href="{% static "quotes/header.css" %}">
+{% endblock  %}
+
+{% block page_title %}{{ book_name }}{% endblock  %}
+
+
+{% block content %}
+    {% include 'quotes/header.html' %}  
+    {% include 'quotes/images.html' %}  
+    <h2>{{ quote }}</h2>
+    <h3>{{ book_name }}<h3> 
+{% endblock  %}
