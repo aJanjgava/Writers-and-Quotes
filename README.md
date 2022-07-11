@@ -2,4 +2,4 @@
 First Django Project
 
 
-See README.pdf file 
+Check out README.pdf file, to see project implementation. (Visual side)
